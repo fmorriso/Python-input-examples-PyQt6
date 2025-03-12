@@ -9,33 +9,21 @@ def get_python_version() -> str:
     return f'{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}'
 
 
-def ask_question_with_default_yes():
-    """Ask yes/no question with Enter key meaning Yes"""
+def ask_yes_no_question():
+    """Ask yes/no question"""
     yn = IU.get_yesno_response('Game Control','Play again?')
-    print(f'{yn=}')
-
-
-def ask_question_with_default_no():
-    """Ask yes/no question with Enter key meaning No"""
-    yn = IU.get_yesno_response('Game Control','Do you want to quit the program?')
-    print(f'{yn=}')
-
-
-def ask_question_with_no_default():
-    """Ask yes/no question requiring explicit response"""
-    yn = IU.get_yesno_response('Do you want ketchup?')
     print(f'{yn=}')
 
 
 def ask_for_whole_number():
     """Ask for a whole number with no restrictions"""
-    n: int = IU.get_whole_number('How many people are in your party? ')
+    n: int = IU.get_whole_number('Restaurant', 'How many people are in your party? ')
     print(f'{n=}')
 
 
 def ask_for_whole_number_in_range():
     """Ask for a whole number with a range restriction"""
-    n: int = IU.get_whole_number_in_range('How many people are in your party? ', 1, 7)
+    n: int = IU.get_whole_number_in_range( 'Restaurant', 'How many people are in your party? ',1, 7)
     print(f'{n=}')
 
 
@@ -66,15 +54,13 @@ def ask_for_decimal_number_in_range():
 if __name__ == '__main__':
     print(f'Python version {get_python_version()}')
 
-    # ask_question_with_default_yes()
-    ask_question_with_default_no()
-    ask_question_with_no_default()
+    # ask_yes_no_question()
 
-    ask_for_whole_number()
+    # ask_for_whole_number()
     ask_for_whole_number_in_range()
 
-    ask_for_floating_point_number()
-    ask_for_floating_point_number_in_range()
+    # ask_for_floating_point_number()
+    # ask_for_floating_point_number_in_range()
 
-    ask_for_decimal_number()
-    ask_for_decimal_number_in_range()
+    # ask_for_decimal_number()
+    # ask_for_decimal_number_in_range()

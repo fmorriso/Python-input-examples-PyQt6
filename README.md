@@ -9,9 +9,7 @@ To use the input utilities (InputUtils class) and its static methods:
 <pre> 
 from input_utilities import InputUtils as IU
 
-yn: bool = IU.get_yesno_response('Do you want ketchup?')
-yn: bool = IU.get_yesno_response('Play again?', enter = True)
-yn: bool = IU.get_yesno_response('Do you want to quit the program?', enter = False)
+yn: bool = IU.get_yesno_response('Fast Food Order','Do you want ketchup?')
 </pre>
 
 ### Whole number input examples
@@ -19,8 +17,8 @@ yn: bool = IU.get_yesno_response('Do you want to quit the program?', enter = Fal
 <pre> 
 from input_utilities import InputUtils as IU
 
-n: int = IU.get_whole_number('How many people are in your party? ')
-n: int = IU.get_whole_number_in_range('How many people are in your party? ', 1, 7)
+n: int = IU.get_whole_number('Restaurant', 'How many people are in your party? ')
+n: int = IU.get_whole_number_in_range('Restaurant','How many people are in your party? ', 1, 7)
 </pre>
 
 ### Floating point number input examples
@@ -28,8 +26,8 @@ n: int = IU.get_whole_number_in_range('How many people are in your party? ', 1, 
 <pre> 
 from input_utilities import InputUtils as IU
 
-x: float = IU.get_floating_point_number('What was the weight in pounds? ')
-x: float = IU.get_floating_point_number_in_range('How many gallons do you wish to purchase? ', 0.5, 22.5)
+x: float = IU.get_floating_point_number('Apples Purchase', 'What was the weight in pounds? ')
+x: float = IU.get_floating_point_number_in_range('Fuel', 'How many gallons do you wish to purchase? ', 0.5, 22.5)
 </pre>
 
 ### Decimal number input examples
@@ -39,8 +37,8 @@ import decimal
 from decimal import Decimal
 from input_utilities import InputUtils as IU
 
-d: decimal = IU.get_decimal_number('How much money do you wish to withdraw? ')
-d: decimal = IU.get_decimal_number_in_range('How much money do you wish to withdraw? ', 5, 600)
+d: decimal = IU.get_decimal_number('ATM', 'How much money do you wish to withdraw? ')
+d: decimal = IU.get_decimal_number_in_range('ATM', 'How much money do you wish to withdraw? ', 5, 600)
 </pre>
 
 ## Tools Used

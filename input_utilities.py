@@ -30,6 +30,30 @@ class InputUtils:
         return n
 
     @staticmethod
+    def get_whole_number_in_range(title: str, msg: str, minimum = 0, maximum=10, parent=None) -> int:
+        # value, ok = QInputDialog.getInt(parent, title, label, value=0, min=0, max=100, step=1)
+        """get a whole number as directed by the specified message"""
+        n: int = 0
+        app = QApplication(sys.argv)
+        prompt: str = f'{msg.replace('?', '')} ({minimum} to {maximum})'
+        waiting_for_valid_input = True
+        response: tuple[int, bool] = (0, False)
+        # trap user in dialog until they enter a valid value and click OK
+        while waiting_for_valid_input:
+            # response will be a tuple of the form (value, True/False} where True
+            # means the OK button was pressed and False means the Cancel button was pressed
+            n, response = QtWidgets.QInputDialog.getInt(parent, title, prompt, min=minimum, max=maximum)
+            # print(f'{response}=')
+            if response and minimum <= n <= maximum:
+                waiting_for_valid_input = False
+
+        app.closeAllWindows()
+        app.exit()
+
+        return n
+
+
+    @staticmethod
     def get_decimal_number(title: str, msg: str, parent=None) -> Decimal:
         """return a decimal number as directed by the message"""
         n: Decimal = Decimal(0)
