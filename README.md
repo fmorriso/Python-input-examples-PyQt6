@@ -1,5 +1,5 @@
-# Python Input Examples (Plain)
-Example of input() encapsulated in a library (InputUtilities class).
+# Python Input Examples (PyQT6)
+Example of input() encapsulated in a library (InputUtilities class) that uses the PyQT6 package for the GUI.
 
 All the methods are static, so you do not need to create an instance of the class to use its methods.
 
@@ -46,6 +46,7 @@ d: decimal = IU.get_decimal_number_in_range('ATM', 'How much money do you wish t
 | Tool     |  Version |
 |:---------|---------:|
 | Python   |   3.13.2 |
+| PyQt6 |    6.8.1 |
 | PyCharm  | 2024.3.4 |
 | VSCode   |   1.98.0 |
 
