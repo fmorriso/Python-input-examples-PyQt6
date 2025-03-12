@@ -1,5 +1,5 @@
 # Python Input Examples (PyQT6)
-Example of input() encapsulated in a library (InputUtilities class) that uses the PyQT6 package for the GUI.
+Example of user input encapsulated in a library (InputUtilities class) that uses the PyQT6 package for the GUI.
 
 All the methods are static, so you do not need to create an instance of the class to use its methods.
 
